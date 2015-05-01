@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<!-- I should've gone to office hours damn... -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Innovative Design Portfolio - Web x Gold Tiers">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- InnoD Favicon -->
+		<link rel="icon" type="image/png" href="favicon.png">
+		<!-- bootstrap because fuck it smh... -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+		<!--[if lt IE 7]>
+		<link href="css/font-awesome-ie7.min.css" rel="stylesheet" media="screen">
+		<![endif]-->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
+
+		<!-- slider -->
+			<!-- brian -->
+			<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+			<script type="text/javascript" src="engine1/jquery.js"></script>
+
+			<!-- catherine -->
+			<link rel="stylesheet" type="text/css" href="engine2/style.css" />
+			<script type="text/javascript" src="engine2/jquery.js"></script>
+
+			<!-- eric -->
+			<link rel="stylesheet" type="text/css" href="engine3/style.css" />
+			<script type="text/javascript" src="engine3/jquery.js"></script>
+
+			<!-- jacqueline -->
+			<link rel="stylesheet" type="text/css" href="engine4/style.css" />
+			<script type="text/javascript" src="engine4/jquery.js"></script>
+
+			<!-- joy -->
+			<link rel="stylesheet" type="text/css" href="engine5/style.css" />
+			<script type="text/javascript" src="engine5/jquery.js"></script>
+
+			<!-- monica -->
+			<link rel="stylesheet" type="text/css" href="engine6/style.css" />
+			<script type="text/javascript" src="engine6/jquery.js"></script>
+
+			<!-- ziqi -->
+			<link rel="stylesheet" type="text/css" href="engine7/style.css" />
+			<script type="text/javascript" src="engine7/jquery.js"></script>
+
+		<!-- modernizr -->
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <title>Innovative Design</title>
+
+    </head>
+
+    <body ng-app="myApp" ng-controller="MyCtrl">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- TOP NAVBAR -->	
+		<header>
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						<div class="innod-logo">
+							<div class="top-navbar-logo">
+								<img src="favicon.png" height="16px;">
+							</div>
+							<span class="top-navbar-title" ng-bind="profile.title" style="display:inline-block"></span>
+							<div>
+								<span class="pull-right nav-icon">
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- nav pills -->
+		<nav class="animated fadeInLeft nav-map">
+			<ul class="nav nav-pills">
+			<!-- 1 HOME/TIER -->
+				<li><a class="ascensorLink ascensorLink0 ascensorLinkActive" href="#"><i class="icon-home"></i>
+					<span ng-bind="nav.home"></span></a></li>
+			<!-- 1 Brian -->
+				<li><a class="ascensorLink ascensorLink1">
+				<div class="icon-initials">BG</div>
+					<span class="small-caps" ng-bind="nav.brian"></span></a></li>
+			<!-- 2 Catherine -->
+				<li><a class="ascensorLink ascensorLink2">
+				<div class="icon-initials">CZ</div>
+					<span class="small-caps" ng-bind="nav.catherine"></span></a></li>
+			<!-- 3 Eric -->
+				<li><a class="ascensorLink ascensorLink3">
+				<div class="icon-initials">EZ</div>
+					<span class="small-caps" ng-bind="nav.eric"></span></a></li>
+			<!-- 4 Jocelyn -->
+				<li><a class="ascensorLink ascensorLink4">
+				<div class="icon-initials">JW</div>
+					<span class="small-caps" ng-bind="nav.jocelyn"></span></a></li>
+			<!-- 5 Joy -->
+				<li><a class="ascensorLink ascensorLink5">
+				<div class="icon-initials">JL</div>
+					<span class="small-caps" ng-bind="nav.joy"></span></a></li>
+			<!-- 6 Monica -->
+				<li><a class="ascensorLink ascensorLink6">
+				<div class="icon-initials">MV</div>
+					<span class="small-caps" ng-bind="nav.monica"></span></a></li>
+			<!-- 7 Ziqi -->
+				<li><a class="ascensorLink ascensorLink7">
+				<div class="icon-initials">ZC</div>
+					<span class="small-caps" ng-bind="nav.ziqi"></span></a></li>
+			</ul>
+		</nav>
+		<nav>
+			<div class="innod-bg">
+				<img src="innod.png" width="42%" style="">
+			</div>
+		</nav>
+			
+        <div id="ascensorBuilding" class="ascensor-container">
+			<!-- Tier -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div class="big-text">
+							<div class="animated fadeInDown left50" style="display:inline-block">
+							<div class="right-arrow" style="display:inline-block;">
+								<i class="icon-angle-double-right" style="display:inline-block"></i>
+							</div>
+								<br>
+								<div>
+									<img class="tier-photo" src="img/tier.jpg" width="80%" style="z-index:2000;">
+								</div>
+								<div>
+									<h2 ng-bind="profile.tier" style="display:inline-block; color:#CABE50;"></h2>&nbsp;&nbsp;<h2 ng-bind="profile.term" style="display:inline-block"></h2>
+								</div>
+								<div>
+									<h4 class="led-by" style="display:inline; color: #C4C4C4;">led by: </h4><a href="https://www.facebook.com/emilytoe" target="_blank"><h3 ng-bind="profile.tierleader" style="display:inline;"></h3></a>
+								</div>
+							</div>
+						</div>
+						<!-- <hr> -->
+						<div class="row-fluid">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 1. Brian -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div style="inline-block">
+								
+							<div id="wowslider-container1">
+								<div class="ws_images"><ul>
+									<li><img src="data1/images/portrait.jpg" alt="portrait" title="portrait" id="wows1_0"/></li>
+									<li><img src="data1/images/brian1.png" alt="brian1" title="brian1" id="wows1_1"/></li>
+									<li><img src="data1/images/brian2.png" alt="brian2" title="brian2" id="wows1_2"/></li>
+									<li><img src="data1/images/brian3.png" alt="brian3" title="brian3" id="wows1_3"/></li>
+									<li><img src="data1/images/brian4.png" alt="angularjs slider" title="brian4" id="wows1_4"/></li>
+									<li><img src="data1/images/brian5.png" alt="brian5" title="brian5" id="wows1_5"/></li>
+								</ul></div>
+							<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+								<div class="ws_shadow"></div>
+								</div>	
+							
+							<div class="big-text">
+							<br>
+								<div class="id-name">Brian Giang</div>
+								<div class="stuff">2nd year - MCB Major</div>
+								<div class="stuff">Interests: running, eating, boba, design, sleep, tv shows</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- 2. Catherine -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div style="inline-block">
+								
+	<div id="wowslider-container2">
+	<div class="ws_images"><ul>
+		<li><img src="data2/images/dsc_0585.jpg" alt="DSC_0585" title="DSC_0585" id="wows2_0"/></li>
+		<li><img src="data2/images/hellotinaxu01.png" alt="hellotinaxu-01" title="hellotinaxu-01" id="wows2_1"/></li>
+		<li><img src="data2/images/itsabirdie.png" alt="itsabirdie" title="itsabirdie" id="wows2_2"/></li>
+		<li><img src="data2/images/thisisaface.png" alt="angular slider" title="thisisaface" id="wows2_3"/></li>
+		<li><img src="data2/images/wicilogo.png" alt="wicilogo" title="wicilogo" id="wows2_4"/></li>
+	</ul></div>
+<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+	<div class="ws_shadow"></div>
+	</div>	
+
+							<div class="big-text">
+							<br>
+								<div class="id-name">Catherine Zhou</div>
+								<div class="stuff">Hi, I study Political Economy and Media Studies! I basically live to eat and sleep, lol.</div>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 3. Eric -->
+
+			<section>
+				<div class="content" class="innod">
+					<div class="container-fluid">
+						<div style="inline-block">
+								
+								<div id="wowslider-container3">
+									<div class="ws_images"><ul>
+										<li><img src="data3/images/portrait.jpg" alt="portrait" title="portrait" id="wows3_0"/></li>
+										<li><img src="data3/images/eric2.png" alt="eric2" title="eric2" id="wows3_1"/></li>
+										<li><img src="data3/images/eric1.png" alt="eric1" title="eric1" id="wows3_2"/></li>
+										<li><img src="data3/images/eric4.png" alt="html slider" title="eric4" id="wows3_3"/></li>
+										<li><img src="data3/images/eric3.png" alt="eric3" title="eric3" id="wows3_4"/></li>
+									</ul></div>
+								<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+									<div class="ws_shadow"></div>
+									</div>	
+
+
+							<div class="big-text">
+							<br>
+								<div class="id-name">Eric Zhao</div>
+								<div class="stuff">Hi I'm a 2nd Year CS major and didn't submit a bio, so 
+								<br>
+								sometimes when I'm alone I like to pretend I'm a worm on the floor, squirming and making loud worm noises.</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+	
+			<!-- 4. Jocelyn -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div style="inline-block">
+
+								<div id="wowslider-container4">
+									<div class="ws_images"><ul>
+										<li><img src="data4/images/image.jpg" alt="image" title="image" id="wows4_0"/></li>
+										<li><img src="data4/images/ficb_banquet_ticket_print.png" alt="FiCB Banquet Ticket Print" title="FiCB Banquet Ticket Print" id="wows4_1"/></li>
+										<li><img src="data4/images/wello_logo.png" alt="Wello Logo" title="Wello Logo" id="wows4_2"/></li>
+										<li><img src="data4/images/ugcc.png" alt="responsive carousel" title="UGCC" id="wows4_3"/></li>
+										<li><img src="data4/images/wici_logo_double_bonds.png" alt="WiCi Logo Double Bonds" title="WiCi Logo Double Bonds" id="wows4_4"/></li>
+									</ul></div>
+								<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+									<div class="ws_shadow"></div>
+									</div>	
+
+							<div class="big-text">
+							<br>
+								<div class="id-name">Jocelyn Wu</div>
+								<div class="stuff">Environmental Economics &amp; Policy Major</div>
+								<div class="stuff">Interests: Exploring new places & Trying new things</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- 5. Joy -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div style="inline-block">
+
+						<div id="wowslider-container5">
+							<div class="ws_images"><ul>
+								<li><img src="data5/images/joyprofile.jpg" alt="Joy-Profile" title="Joy-Profile" id="wows5_0"/></li>
+								<li><img src="data5/images/postcard.jpg" alt="postcard" title="postcard" id="wows5_1"/></li>
+								<li><img src="data5/images/eric_and_joy_page001_2.jpg" alt="Eric and Joy -page-001" title="Eric and Joy -page-001" id="wows5_2"/></li>
+								<li><img src="data5/images/wings.jpg" alt="angular slider" title="Wings" id="wows5_3"/></li>
+								<li><img src="data5/images/eggster.png" alt="Eggster" title="Eggster" id="wows5_4"/></li>
+							</ul></div>
+						<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+							<div class="ws_shadow"></div>
+							</div>	
+
+							<div class="big-text">
+							<br>
+								<div class="id-name">Joy Lin</div>
+								<div class="stuff">My name is Joy Lin and I am a double major in English and Art Practice. </div>
+								<div class="stuff">I see design as a method of rethinking the way I approach my practices both analytically and visually.</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. Monica -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div style="inline-block">
+
+								<div id="wowslider-container6">
+									<div class="ws_images"><ul>
+										<li><img src="data6/images/profile.jpg" alt="profile" title="profile" id="wows6_0"/></li>
+										<li><img src="data6/images/fashion.png" alt="fashion" title="fashion" id="wows6_1"/></li>
+										<li><img src="data6/images/meow.png" alt="meow" title="meow" id="wows6_2"/></li>
+										<li><img src="data6/images/music1.png" alt="slideshow html" title="music1" id="wows6_3"/></li>
+										<li><img src="data6/images/wici01.png" alt="wici-01" title="wici-01" id="wows6_4"/></li>
+									</ul></div>
+								<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+									<div class="ws_shadow"></div>
+									</div>
+
+							<div class="big-text">
+							<br>
+								<div class="id-name">Monica Vathanavarin</div>
+								<div class="stuff">Major: Cognitive Science</div>
+								<div class="stuff">Interests: Watching films, hiking, taking photographs</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 7. Ziqi -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+						<div style="inline-block">
+
+							<div id="wowslider-container7">
+								<div class="ws_images"><ul>
+									<li><img src="data7/images/profile.jpg" alt="profile" title="profile" id="wows7_0"/></li>
+									<li><img src="data7/images/sushi01.png" alt="Sushi-01" title="Sushi-01" id="wows7_1"/></li>
+									<li><img src="data7/images/dts_banner01.png" alt="DTS Banner-01" title="DTS Banner-01" id="wows7_2"/></li>
+									<li><img src="data7/images/berkeleyw01.png" alt="javascript slideshow" title="BerkeleyW-01" id="wows7_3"/></li>
+									<li><img src="data7/images/women_in_chemistryw01.png" alt="Women in ChemistryW-01" title="Women in ChemistryW-01" id="wows7_4"/></li>
+								</ul></div>
+							<div class="ws_script" style="position:absolute;left:-99%">jquery image gallery</div>
+								<div class="ws_shadow"></div>
+								</div>	
+
+							<div class="big-text">
+							<br>
+								<div class="id-name">Ziqi Chen</div>
+								<div class="stuff">I’m an aspiring artist majoring in ChemE, so basically<br>I’m the most right-brained person in the most left-brained major.</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+        </div>
+
+		<script src="js/vendor/jquery-1.10.1.min.js"></script>
+		<script src="js/vendor/angular.min.js" type="text/javascript"></script>
+		<script src="js/vendor/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>	
+        <script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/jquery.ascensor.min.js" type="text/javascript"></script>	
+		
+		<script src="components/timeline/compiled/js/storyjs-embed.js" type="text/javascript"></script>
+		
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/app.js"></script>
+
+	<!-- slider -->
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<script type="text/javascript" src="engine1/script.js"></script>
+	<script type="text/javascript" src="engine2/wowslider.js"></script>
+	<script type="text/javascript" src="engine2/script.js"></script>
+	<script type="text/javascript" src="engine3/wowslider.js"></script>
+	<script type="text/javascript" src="engine3/script.js"></script>
+	<script type="text/javascript" src="engine4/wowslider.js"></script>
+	<script type="text/javascript" src="engine4/script.js"></script>
+	<script type="text/javascript" src="engine5/wowslider.js"></script>
+	<script type="text/javascript" src="engine5/script.js"></script>
+	<script type="text/javascript" src="engine6/wowslider.js"></script>
+	<script type="text/javascript" src="engine6/script.js"></script>
+	<script type="text/javascript" src="engine7/wowslider.js"></script>
+	<script type="text/javascript" src="engine7/script.js"></script>
+
+
+
+
+    </body>
+</html>
